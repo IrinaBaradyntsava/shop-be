@@ -1,11 +1,7 @@
-'use strict';
+import { getProductById } from './src/get-product-by-id.js';
+import { getAllProducts } from './src/get-all-products.js';
 
-module.exports.hello = async event => {
-  return {
-    statusCode: 200,
-    body: {
-      productName: 'Book',
-      price: 123
-    }
-  };
-};
+export {
+  getProductById,
+  getAllProducts
+}
