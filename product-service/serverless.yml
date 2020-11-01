@@ -15,9 +15,20 @@ custom:
     includeModules: true
 
 functions:
-  hello:
-    handler: handler.hello
+  getAllProducts:
+    handler: handler.getAllProducts
     events:
       - http:
           path: products
           method: get
+  
+  getProductById:
+    handler: handler.getProductById
+    events:
+      - http:
+          path: products/{productId}
+          method: get
+          request: 
+            parameters: 
+              paths: 
+                productId: true
